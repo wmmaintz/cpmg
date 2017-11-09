@@ -1,0 +1,165 @@
+<!doctype html>
+<!--
+/*
+ * @ngdoc overview
+ * @name photo.gallery.html
+ *
+ * @description
+ * AngularJS partials view - Photo Gallery screen.
+ * Utilizes RWD CSS3 features and functionality.
+ *
+ */
+-->
+
+<section class="photo-gallery-section">
+    <div class="container-fluid">
+
+        <!-- Heading Row -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading">Photo Gallery</h1>
+                <div class="section-subheading">
+                    <h3>View the photos and info about each.</h3>
+                    <h4>Hover over each photo to see associated data.</h4>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <!== Hide the input fields while the data is loading -->
+        <div ng-hide="loadingPhotos">
+
+            <!-- Filter Row -->
+            <div class="row">
+                <div class="col-sm-12 tagFilter">
+
+                    <div class="col-sm-4 text-center">
+                        <label class="primary">Filter By Album:</label><br/>
+                        <select ng-model="albumFilter">
+                            <option value="" selected>--- No Filter ---</option>
+                            <option ng-if="photoAlbums.length > 0"
+                                ng-repeat="photoAlbum in photoAlbums | orderBy: albumId" 
+                                value="{{ photoAlbum }}">AlbumId #{{ photoAlbum }}</option>
+                        </select>
+                        <br/>
+                        <label class="theResults">Result of filter : 
+                            {{ (photos | album : albumFilter).length }} 
+                            out of {{(photos).length}} photos.
+                            <br/>[{{albumFilter}}]
+                        </label>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <label class="primary">Sort By:</label><br/>
+                        <select ng-model="sortOrder">
+                            <option value="id">Id</option>
+                            <option value="albumId">AlbumId</option>
+                            <option value="title">Title</option>
+                            <option value="url">URL</option>
+                            <option value="thumbnailUrl">Thumbnail URL</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <label class="primary">Custom Search: </label><br/>
+                        <input type="text" ng-model="searchName"  size="25"
+                            placeholder="enter custom search criteria here">
+                        <br/>
+                        <label class="theResults">Result of custom search : 
+                            {{ (photos | filter: searchName).length}} 
+                            out of {{photos.length}} photos.
+                        </label>                 
+                    </div>
+
+                </div>                
+            </div>
+
+            <!-- Combined Filter and Search Results -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <label class="theResults">Result of combined filter and custom search : 
+                        {{ ( photos | album: albumFilter |
+                            filter: searchName ).length}} 
+                        out of {{( photos | album: albumFilter ).length}} photos.
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Progress -->
+        <div id="loadingPhotos" class="text-center" ng-show="loadingPhotos">
+            <br/><br/><br/><span class="blink_me">Loading Photos</span>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="photos" ng-repeat="photo in (photos | 
+                    album: albumFilter | 
+                    filter: searchName  | 
+                    orderBy: sortOrder)">
+                    <div class="imageContainer">
+                        <!-- Flip 3D photos -->
+                        <div class="flip3D row">
+
+                            <!-- Define the backside of the photo - the data -->
+                            <div class="back col-lg-1">
+                                Image #{{photo.id}}
+                                <br/>
+                                Album #{{photo.albumId}}
+                                <br/>
+                                Title: <strong>{{photo.title}}</strong>
+                                <!-- ng-bind-html="{{photo.name}} | highlight:searchName:caseSensitive}}">--><br/>
+                                <br/>
+                                <button 
+                                    id="fullscreenBtn" 
+                                    class="dialog-button dialog-button-success"
+                                    ui-sref="photoFullscreen({name: photo.title, href: photo.url})">
+                                    Enlarge Image
+                                </button>
+                                <p></p>
+                            </div>
+
+                            <!-- Define the front-side of the photo - cropped to size -->
+                            <div class="front">
+                                <img class="img-responsive img-thumbnail" 
+                                    ng-src="{{photo.thumbnailUrl}}" 
+                                    alt="{{photo.title}}"><br/>
+                                <div style="display: inline;">
+                                    <div class="panel panel-primary vidPanel">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">&nbsp;{{photo.title}}&nbsp;</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <!-- Add more photos from the net -->
+        <!-- Use addPhotos(1) to add photos to the photoList -->
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+
+        <!--
+                <div id="addPhotosBtn">
+                    <button type="button" 
+                            class="btn btn-default"
+                            ng-click="addPhotos(0)">Add Random Photos From The Net
+                    </button>
+                </div> --> <!-- Add Photo div -->
+
+            </div>
+        </div>
+        <br/>
+
+    </div>
+</section>

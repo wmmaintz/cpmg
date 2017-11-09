@@ -1,0 +1,1340 @@
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name flip3D.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the photo gallery
+ ** Utilizes Responsive Web Design and CSS3 features and functionality.
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+/**
+** CSS for image 3D flip
+**/
+.flip3D {
+  border-radius: 24px;
+  float: left;
+  height: 280px;
+  padding: 0px;
+  width: 240px;
+}
+.flip3D .front {
+  border-radius: inherit;
+  height: 240px;
+  width: 240px;
+}
+.flip3D .front img {
+  background-size: contain;
+  margin: 0px auto;
+  vertical-align: middle;
+}
+.flip3D .back button {
+  background-color: #000000;
+  border-radius: 10px;
+  bottom: 2px;
+  color: #F5F5F5;
+  left: 5%;
+  position: absolute;
+  width: 90%;
+}
+.flip3D > .front {
+  -moz-backface-visibility: hidden;
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -moz-transition: 0.5s linear 0s;
+  -ms-backface-visibility: hidden;
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -ms-transition: 0.5s linear 0s;
+  -o-backface-visibility: hidden;
+  -o-transform: perspective(600px) rotateY(180deg);
+  -o-transition: 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -webkit-transition: 0.5s linear 0s;
+  backface-visibility: hidden;
+  background: transparent;
+  border: 10px solid transparent;
+  border-radius: inherit;
+  margin-top: 10px;
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  transition: 0.5s linear 0s;
+}
+.flip3D:hover > .front {
+  -moz-transform: perspective(600px) rotateY(-180deg);
+  -ms-transform: perspective(600px) rotateY(-180deg);
+  -o-transform: perspective(600px) rotateY(-180deg);
+  -webkit-transform: perspective(600px) rotateY(-180deg);
+  transform: perspective(600px) rotateY(-180deg);
+  z-index: 100;
+}
+.flip3D > .back {
+  -moz-backface-visibility: hidden;
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -moz-transition: 0.5s linear 0s;
+  -ms-backface-visibility: hidden;
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -ms-transition: 0.5s linear 0s;
+  -o-backface-visibility: hidden;
+  -o-transform: perspective(600px) rotateY(180deg);
+  -o-transition: 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -webkit-transition: 0.5s linear 0s;
+  backface-visibility: hidden;
+  background: #77fd77;
+  border: 2px solid #056402;
+  border-radius: inherit;
+  height: 264px;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  transition: 0.5s linear 0s;
+  width: 208px;
+  /*
+    transform: perspective(600px) rotateY(180deg);
+    transition: -webkit-transform 0.5s linear 0s;
+    transition:    -moz-transform 0.5s linear 0s;
+    transition:     -ms-transform 0.5s linear 0s;
+    transition:      -o-transform 0.5s linear 0s;
+    transition:         transform 0.5s linear 0s;
+    */
+}
+.flip3D:hover > .back {
+  -moz-transform: perspective(600px) rotateY(0deg);
+  -ms-transform: perspective(600px) rotateY(0deg);
+  -o-transform: perspective(600px) rotateY(0deg);
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  z-index: 100;
+}
+.infoTags {
+  height: 50px;
+  max-height: 180px;
+  max-width: 100%;
+  width: 180px;
+  word-spacing: 5px;
+  word-wrap: break-word;
+}
+/*****************************************************************************
+ ** END OF FILE - flip3D.less
+ ****************************************************************************/
+/*# sourceMappingURL=flip3D.css.map */
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name footer.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the footer
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+footer {
+  background: -webkit-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -moz-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -ms-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -o-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: linear-gradient(#56c963, #c5f7c5, #56c963);
+  border-top: 0.25px solid #000000;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  bottom: 0px;
+  color: #000000;
+  height: 30px;
+  margin: auto;
+  padding: 5px;
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 9999;
+}
+footer .footerText {
+  font-size: 10pt;
+  vertical-align: middle;
+}
+footer .copyrightLine .copyright,
+footer .copyrightLine .allBus,
+footer .copyrightLine .abcs,
+footer .copyrightLine .allRights {
+  font-size: 9pt;
+  text-transform: none;
+}
+footer .copyrightLine .abcs {
+  display: none;
+}
+footer .socBtns {
+  display: inline-block;
+  object-fit: fill;
+  padding: 0px;
+  text-align: center;
+  text-transform: none;
+  width: 100%;
+}
+footer .socBtns li {
+  background-color: #ffffff;
+  border-radius: 33%;
+  color: #000000;
+  display: inline-flex;
+  font-size: 12pt;
+  height: 20px;
+  list-style: none;
+  list-style-type: none;
+  margin-top: 0px;
+  outline: none;
+  width: 20px;
+}
+footer .socBtns li a {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+footer .socBtns li a:hover,
+footer .socBtns li a:focus,
+footer .socBtns li a:active,
+footer .socBtns li a .active {
+  background: -webkit-radial-gradient(#ffffff, #09ff00);
+  background: -moz-radial-gradient(#ffffff, #09ff00);
+  background: -ms-radial-gradient(#ffffff, #09ff00);
+  background: -o-radial-gradient(#ffffff, #09ff00);
+  background: radial-gradient(#ffffff, #09ff00);
+  border: 1px solid #056402;
+  color: #09ff00;
+}
+footer .socBtns li a i .fa {
+  font-size: 14pt;
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .footerRow1 {
+    margin-bottom: 10px;
+  }
+  .footerRow1 .footer-text {
+    font-size: 90%;
+  }
+  .footerRow1 .soc-btns {
+    font-size: 90%;
+  }
+  .footerRow2 {
+    /* font-size: 9pt; */
+    font-size: 90%;
+    margin-top: 10px;
+    top: 20px;
+  }
+  .footerRow2 .copyrightLine {
+    vertical-align: middle;
+  }
+  .footerRow2 .copyrightLine .copyright {
+    display: inline-block;
+  }
+  .footerRow2 .copyrightLine .allRights {
+    display: none;
+  }
+}
+@media (min-width: 1px) and (max-width: 424px) {
+  .footerRow1 {
+    display: none;
+  }
+  .footerRow2 {
+    margin-top: 20px;
+  }
+  .footerRow2 .copyrightLine .abcs {
+    display: inline-block;
+    padding: 20px;
+  }
+  .footerRow2 .copyrightLine .allBus {
+    display: none;
+  }
+  .footerRow2 .copyrightLine .allRights {
+    display: none;
+  }
+}
+/*****************************************************************************
+ ** END OF FILE - footer.less
+ ****************************************************************************/
+/*# sourceMappingURL=footer.css.map */
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name main.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the main attributes
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+/* To secure correct behavior in older browsers,
+ * set the CSS display property to block:
+ */
+header,
+section,
+footer,
+aside,
+article,
+figure {
+  display: block;
+}
+a {
+  color: #1100fa;
+}
+a:hover,
+a:focus,
+a:active,
+a .active {
+  background-color: #77fd77;
+  color: #059900;
+  outline: inherit;
+}
+body {
+  font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: none;
+  -webkit-tap-highlight-color: #09ff00;
+  background-position: 50 50;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background-image: url('../img/background.jpg'); */
+  background: -webkit-linear-gradient(#F5F5F5, #056402);
+  background: -moz-linear-gradient(#F5F5F5, #056402);
+  background: -ms-linear-gradient(#F5F5F5, #056402);
+  background: -o-linear-gradient(#F5F5F5, #056402);
+  background: linear-gradient(#F5F5F5, #056402);
+  margin: 0px;
+  padding: 0px;
+}
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+.btn .active {
+  outline: 0px;
+}
+.btn-primary {
+  color: white;
+  background-color: #09ff00;
+  border-color: #09ff00;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #07cc00;
+  border-color: #07c200;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #09ff00;
+  border-color: #09ff00;
+}
+.btn-primary .badge {
+  color: #09ff00;
+  background-color: white;
+}
+.btn-variant {
+  color: #056402;
+  background-color: #77fd77;
+  border-color: #56c963;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-variant:hover,
+.btn-variant:focus,
+.btn-variant:active,
+.btn-variant.active,
+.open .dropdown-toggle.btn-variant {
+  color: #056402;
+  background-color: #45fc45;
+  border-color: #37ab44;
+}
+.btn-variant:active,
+.btn-variant.active,
+.open .dropdown-toggle.btn-variant {
+  background-image: none;
+}
+.btn-variant.disabled,
+.btn-variant[disabled],
+fieldset[disabled] .btn-variant,
+.btn-variant.disabled:hover,
+.btn-variant[disabled]:hover,
+fieldset[disabled] .btn-variant:hover,
+.btn-variant.disabled:focus,
+.btn-variant[disabled]:focus,
+fieldset[disabled] .btn-variant:focus,
+.btn-variant.disabled:active,
+.btn-variant[disabled]:active,
+fieldset[disabled] .btn-variant:active,
+.btn-variant.disabled.active,
+.btn-variant[disabled].active,
+fieldset[disabled] .btn-variant.active {
+  background-color: #77fd77;
+  border-color: #56c963;
+}
+.btn-variant .badge {
+  color: #77fd77;
+  background-color: #056402;
+}
+.btn-xl {
+  color: white;
+  background-color: #09ff00;
+  border-color: #09ff00;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 40px;
+}
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  color: white;
+  background-color: #07cc00;
+  border-color: #07c200;
+}
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  background-color: #09ff00;
+  border-color: #09ff00;
+}
+.btn-xl .badge {
+  color: #09ff00;
+  background-color: white;
+}
+.clear {
+  clear: both;
+}
+.container {
+  display: inline-block;
+  height: 100%;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+}
+.vertical-scrollbar {
+  overflow-x: hidden;
+  /*for hiding horizontal scroll bar*/
+  overflow-y: auto;
+  /*for vertical scroll bar*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.img-centered {
+  margin: 0px auto;
+}
+.jumbotron {
+  border-radius: 50px;
+  color: #F5F5F5;
+  background: -webkit-radial-gradient(#000000, #808080, #000000);
+  background: -moz-radial-gradient(#000000, #808080, #000000);
+  background: -ms-radial-gradient(#000000, #808080, #000000);
+  background: -o-radial-gradient(#000000, #808080, #000000);
+  background: radial-gradient(#000000, #808080, #000000);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.ng-animate.item:not(.left):not(.right) {
+  -webkit-transition: 0s ease-in-out left;
+  transition: 0s ease-in-out left;
+}
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+p .large {
+  font-size: 16px;
+}
+pre {
+  background-color: #c5f7c5;
+  line-height: 1.1;
+  margin: 0px auto;
+  width: 50%;
+  z-index: 9999;
+}
+pre .stateDisplay {
+  align-content: flex-start;
+  bottom: 100px;
+  display: inline-block;
+  height: 90px;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  width: 300px;
+}
+pre .stateDisplay p {
+  color: #FF0000;
+  font-size: 12px;
+  overflow: hidden;
+}
+.row {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.text-muted {
+  color: #77fd77;
+}
+.text-primary {
+  color: #09ff00;
+}
+::-moz-selection {
+  background: #09ff00;
+  text-shadow: none;
+}
+::selection {
+  background: #09ff00;
+  text-shadow: none;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+/*****************************************************************************
+ ** END OF FILE - main.less
+ ****************************************************************************/
+/*# sourceMappingURL=main.css.map */
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name navbar.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the navigation bar
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+.nav,
+.navbar-default,
+.navbar-right {
+  /* .gradientMenu(); */
+  background: -webkit-linear-gradient(transparent, transparent, transparent);
+  background: -moz-linear-gradient(transparent, transparent, transparent);
+  background: -ms-linear-gradient(transparent, transparent, transparent);
+  background: -o-linear-gradient(transparent, transparent, transparent);
+  background: linear-gradient(transparent, transparent, transparent);
+  border: .25px solid transparent;
+  -moz-box-sizing: none;
+  -webkit-box-shadow: 0px 0px;
+  -webkit-box-sizing: none;
+  border: 0px;
+  box-shadow: 0px 0px;
+  box-sizing: none;
+  height: 55px;
+  margin-top: 0px;
+  z-index: 9999;
+}
+.nav .navbar-toggle,
+.navbar-default .navbar-toggle,
+.navbar-right .navbar-toggle {
+  border: 2px solid #77fd77;
+}
+.nav .menu-item,
+.navbar-default .menu-item,
+.navbar-right .menu-item {
+  background: -webkit-radial-gradient(#ffffff, #77fd77);
+  background: -moz-radial-gradient(#ffffff, #77fd77);
+  background: -ms-radial-gradient(#ffffff, #77fd77);
+  background: -o-radial-gradient(#ffffff, #77fd77);
+  background: radial-gradient(#ffffff, #77fd77);
+  color: #056402;
+  border: 2px solid #77fd77;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  padding: 13px;
+}
+.nav .menu-item:active,
+.navbar-default .menu-item:active,
+.navbar-right .menu-item:active,
+.nav .menu-item.active,
+.navbar-default .menu-item.active,
+.navbar-right .menu-item.active,
+.nav .menu-item::selection,
+.navbar-default .menu-item::selection,
+.navbar-right .menu-item::selection,
+.nav .menu-item::-moz-selection,
+.navbar-default .menu-item::-moz-selection,
+.navbar-right .menu-item::-moz-selection {
+  background: -webkit-radial-gradient(#56c963, #056402);
+  background: -moz-radial-gradient(#56c963, #056402);
+  background: -ms-radial-gradient(#56c963, #056402);
+  background: -o-radial-gradient(#56c963, #056402);
+  background: radial-gradient(#56c963, #056402);
+  color: #056402;
+  border: 2px solid #F5F5F5;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border-radius: 10px;
+}
+.nav .menu-item:hover,
+.navbar-default .menu-item:hover,
+.navbar-right .menu-item:hover,
+.nav .menu-item:focus,
+.navbar-default .menu-item:focus,
+.navbar-right .menu-item:focus {
+  background: -webkit-radial-gradient(#77fd77, #F5F5F5);
+  background: -moz-radial-gradient(#77fd77, #F5F5F5);
+  background: -ms-radial-gradient(#77fd77, #F5F5F5);
+  background: -o-radial-gradient(#77fd77, #F5F5F5);
+  background: radial-gradient(#77fd77, #F5F5F5);
+  color: #666666;
+  border: 2px solid #666666;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border-radius: 10px;
+}
+.nav .submenu-item,
+.navbar-default .submenu-item,
+.navbar-right .submenu-item {
+  background: -webkit-radial-gradient(#ffffff, #A3A3A3);
+  background: -moz-radial-gradient(#ffffff, #A3A3A3);
+  background: -ms-radial-gradient(#ffffff, #A3A3A3);
+  background: -o-radial-gradient(#ffffff, #A3A3A3);
+  background: radial-gradient(#ffffff, #A3A3A3);
+  color: #056402;
+  border: 2px solid #A3A3A3;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  background-color: black;
+  border-radius: 15px;
+}
+.nav .submenu-item:active,
+.navbar-default .submenu-item:active,
+.navbar-right .submenu-item:active,
+.nav .submenu-item.active,
+.navbar-default .submenu-item.active,
+.navbar-right .submenu-item.active {
+  background: -webkit-radial-gradient(#F5F5F5, #77fd77);
+  background: -moz-radial-gradient(#F5F5F5, #77fd77);
+  background: -ms-radial-gradient(#F5F5F5, #77fd77);
+  background: -o-radial-gradient(#F5F5F5, #77fd77);
+  background: radial-gradient(#F5F5F5, #77fd77);
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+}
+.nav .submenu-item:hover,
+.navbar-default .submenu-item:hover,
+.navbar-right .submenu-item:hover,
+.nav .submenu-item:focus,
+.navbar-default .submenu-item:focus,
+.navbar-right .submenu-item:focus {
+  background: -webkit-radial-gradient(#77fd77, #F5F5F5);
+  background: -moz-radial-gradient(#77fd77, #F5F5F5);
+  background: -ms-radial-gradient(#77fd77, #F5F5F5);
+  background: -o-radial-gradient(#77fd77, #F5F5F5);
+  background: radial-gradient(#77fd77, #F5F5F5);
+  color: #666666;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+}
+.nav .dropdown-menu,
+.navbar-default .dropdown-menu,
+.navbar-right .dropdown-menu {
+  -webkit-box-shadow: 0px 0px;
+  background-color: transparent;
+  border: 10px solid transparent;
+  box-shadow: 0px 0px;
+  padding: 0px;
+}
+.navbar-collapse {
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-collapse .navbar-form {
+  border: 1px solid #666666;
+}
+/*****************************************************************************
+ ** END OF FILE - navbar.less
+ ****************************************************************************/
+/*# sourceMappingURL=navbar.css.map */
+/**
+ ****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name sections.less
+ **
+ ** @description
+ ** LESS/CSS for each section within the app.
+ ** Utilizes Responsive Web Design and CSS3 features and functionality.
+ **
+ *****************************************************************************
+ **/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+.container,
+.container-fluid {
+  border: 0px solid transparent;
+}
+section {
+  background: -webkit-linear-gradient(#ffffff, #c5f7c5, transparent);
+  background: -moz-linear-gradient(#ffffff, #c5f7c5, transparent);
+  background: -ms-linear-gradient(#ffffff, #c5f7c5, transparent);
+  background: -o-linear-gradient(#ffffff, #c5f7c5, transparent);
+  background: linear-gradient(#ffffff, #c5f7c5, transparent);
+  color: #000000;
+  font-size: 14pt;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  top: 0px;
+}
+section .section-heading {
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-size: 20pt;
+  margin-top: 60px;
+  overflow-x: wrap;
+  overflow-y: wrap;
+  text-shadow: 2px 3px 6px #808080;
+  word-wrap: break-word;
+}
+section .section-subheading {
+  font-family: "Droid Serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  color: #666666;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0px auto 0px;
+  text-shadow: 2px 2px 4px #808080;
+  text-transform: none;
+  word-wrap: break-word;
+}
+section .theResult {
+  background-color: green;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: normal;
+}
+/**
+ ** Google & Bootstrap Device Sizes
+ **
+ ** 1440px - Large Desktop
+ ** 1200px - size_xl
+ ** 1072px - size_lg
+ ** 1024px - Normal Desktop
+ **  992px - size_md
+ **  768px - size_sm
+ **  768px - Tablet
+ **  425px - Large Mobile
+ **  375px - Medium Mobile
+ **  350px - size_xs
+ **  320px - Small Mobile
+ **
+ **/
+@media (min-width: 1440px) {
+  section .section-heading {
+    font-size: 50pt;
+  }
+  section .section-subheading img {
+    size: 150%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  section .section-heading {
+    font-size: 50pt;
+  }
+}
+@media (min-width: 1072px) and (max-width: 1199px) {
+  section .section-heading {
+    font-size: 50pt;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1071px) {
+  section .section-heading {
+    font-size: 48pt;
+  }
+}
+@media (min-width: 992px) and (max-width: 1023px) {
+  section .section-heading {
+    font-size: 48pt;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .section-heading {
+    font-size: 45pt;
+    margin-top: 50px;
+  }
+  section .section-subheading {
+    font-size: 16pt;
+  }
+}
+/* Minimum width: 425px - Large Mobile */
+@media (min-width: 425px) and (max-width: 767px) {
+  section .section-heading {
+    font-size: 30pt;
+    margin-top: 70px;
+  }
+  section .section-subheading {
+    font-size: 20pt;
+  }
+}
+/* Minimum width: 375px - Medium Mobile */
+@media (min-width: 375px) and (max-width: 424px) {
+  section .section-heading {
+    font-size: 24pt;
+    margin-top: 70px;
+  }
+  section .section-subheading {
+    font-size: 18pt;
+  }
+}
+/* Minimum width: 350px - size_xs */
+@media (min-width: 350px) and (max-width: 374px) {
+  section .section-heading {
+    font-size: 24pt;
+  }
+  section .section-subheading {
+    font-size: 16pt;
+  }
+}
+/* Minimum width: 320px - Small Mobile */
+@media (min-width: 320px) and (max-width: 349px) and (orientation: portrait) {
+  section .section-heading {
+    font-size: 20pt;
+    margin-top: 60px;
+  }
+  section .section-subheading {
+    font-size: 16pt;
+  }
+}
+@media (min-width: 1px) and (max-width: 319px) {
+  section {
+    display: none;
+  }
+}
+.home-section {
+  background: -webkit-linear-gradient(#056402, #F5F5F5);
+  background: -moz-linear-gradient(#056402, #F5F5F5);
+  background: -ms-linear-gradient(#056402, #F5F5F5);
+  background: -o-linear-gradient(#056402, #F5F5F5);
+  background: linear-gradient(#056402, #F5F5F5);
+}
+.home-section .section-heading {
+  font-family: "Droid Serif", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: none;
+  color: #F5F5F5;
+  font-style: italic;
+  padding: 0px 10px 0px;
+  text-shadow: 2px 3px 4px #56c963;
+}
+.home-section #learnMore {
+  border: 2px solid #77fd77;
+  margin: 0px auto;
+  text-align: center;
+}
+.website-section {
+  background: -webkit-linear-gradient(#ffffff, #F5F5F5, transparent);
+  background: -moz-linear-gradient(#ffffff, #F5F5F5, transparent);
+  background: -ms-linear-gradient(#ffffff, #F5F5F5, transparent);
+  background: -o-linear-gradient(#ffffff, #F5F5F5, transparent);
+  background: linear-gradient(#ffffff, #F5F5F5, transparent);
+}
+.website-section .about-text {
+  color: #000000;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.website-section .section-subheading {
+  color: #056402;
+}
+.website-section img {
+  height: 60px;
+  width: auto;
+}
+.photo-gallery-section {
+  color: #000000;
+  background: -webkit-linear-gradient(#F5F5F5, #77fd77, #ffffff);
+  background: -moz-linear-gradient(#F5F5F5, #77fd77, #ffffff);
+  background: -ms-linear-gradient(#F5F5F5, #77fd77, #ffffff);
+  background: -o-linear-gradient(#F5F5F5, #77fd77, #ffffff);
+  background: linear-gradient(#F5F5F5, #77fd77, #ffffff);
+}
+.photo-gallery-section .section-heading {
+  color: #056402;
+  margin: 50px 0px 0px 0px;
+  text-shadow: 3px 2px 5px #808080;
+}
+.photo-gallery-section .section-subheading {
+  color: #000000;
+  margin: 0px auto 0px;
+  text-shadow: 2px 2px 6px #000000;
+}
+.photo-gallery-section .section-subheading h4 {
+  text-shadow: 0px 0px 0px;
+}
+.photo-gallery-section .primary {
+  font-size: 14pt;
+  text-shadow: 0px 0px 1px #000000;
+}
+.photo-gallery-section .theResults {
+  color: #000000;
+  font-size: 12pt;
+  text-shadow: 0px 0px 0px;
+}
+.photo-gallery-section .photos {
+  border-radius: inherit;
+  border-radius: 25px;
+  display: inline-block;
+  height: 336px;
+  margin: 2px auto;
+  text-align: center;
+}
+.photo-gallery-section .photos .flip3D {
+  height: 288px;
+  object-fit: contain;
+}
+.photo-gallery-section .photos .flip3D .front img {
+  height: 240px;
+}
+.photo-gallery-section .photos .flip3D .back {
+  font-size: 12pt;
+}
+.photo-gallery-section .photos .flip3D .back #fullscreenBtn {
+  margin: 0px auto;
+  text-align: center;
+}
+.photo-gallery-section .photos .flip3D .back .hilight {
+  color: #056402;
+}
+.photo-fullscreen-section {
+  color: #F5F5F5;
+  font-weight: normal;
+  background: -webkit-linear-gradient(#666666, #000000, transparent);
+  background: -moz-linear-gradient(#666666, #000000, transparent);
+  background: -ms-linear-gradient(#666666, #000000, transparent);
+  background: -o-linear-gradient(#666666, #000000, transparent);
+  background: linear-gradient(#666666, #000000, transparent);
+}
+.photo-fullscreen-section .section-heading {
+  color: #000000;
+  margin: 50px 0px 0px 0px;
+  text-shadow: 3px 2px 5px #666666;
+}
+.photo-fullscreen-section #fullscreenPhoto {
+  margin: 0px auto 10px;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider {
+  margin-left: 10px;
+  position: absolute;
+  top: 0px;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .imgSizeLbl {
+  background-color: #000000;
+  margin: 0px auto 5px;
+  position: relative;
+  text-align: left;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize {
+  border: 1px solid #77fd77;
+  margin: 0px;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize input[type=range] {
+  -webkit-appearance: none;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize input[type=range]::-webkit-slider-runnable-track {
+  background: #A3A3A3;
+  border: 0px;
+  border-radius: 3px;
+  height: 5px;
+  width: auto;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: goldenrod;
+  border: 0px;
+  border-radius: 50%;
+  height: 16px;
+  margin-top: -4px;
+  width: 16px;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize input[type=range]:focus {
+  outline: none;
+}
+.photo-fullscreen-section #fullscreenPhoto #imgSizeSlider .slideImgSize input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #A3A3A3;
+}
+.photo-fullscreen-section #fullscreenPhoto .img {
+  border: 1px solid #FF0000;
+  margin: 50px auto 5px;
+}
+/*****************************************************************************
+ ** END OF FILE - sections.less
+ ****************************************************************************/
+/*# sourceMappingURL=sections.css.map */

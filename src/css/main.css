@@ -1,0 +1,347 @@
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name main.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the main attributes
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+/* To secure correct behavior in older browsers,
+ * set the CSS display property to block:
+ */
+header,
+section,
+footer,
+aside,
+article,
+figure {
+  display: block;
+}
+a {
+  color: #1100fa;
+}
+a:hover,
+a:focus,
+a:active,
+a .active {
+  background-color: #77fd77;
+  color: #059900;
+  outline: inherit;
+}
+body {
+  font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: none;
+  -webkit-tap-highlight-color: #09ff00;
+  background-position: 50 50;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../img/background.jpg');
+  background-size: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.btn:focus,
+.btn:active,
+.btn:active:focus,
+.btn .active {
+  outline: 0px;
+}
+.btn-primary {
+  color: white;
+  background-color: #09ff00;
+  border-color: #09ff00;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #07cc00;
+  border-color: #07c200;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #09ff00;
+  border-color: #09ff00;
+}
+.btn-primary .badge {
+  color: #09ff00;
+  background-color: white;
+}
+.btn-variant {
+  color: #056402;
+  background-color: #77fd77;
+  border-color: #56c963;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-variant:hover,
+.btn-variant:focus,
+.btn-variant:active,
+.btn-variant.active,
+.open .dropdown-toggle.btn-variant {
+  color: #056402;
+  background-color: #45fc45;
+  border-color: #37ab44;
+}
+.btn-variant:active,
+.btn-variant.active,
+.open .dropdown-toggle.btn-variant {
+  background-image: none;
+}
+.btn-variant.disabled,
+.btn-variant[disabled],
+fieldset[disabled] .btn-variant,
+.btn-variant.disabled:hover,
+.btn-variant[disabled]:hover,
+fieldset[disabled] .btn-variant:hover,
+.btn-variant.disabled:focus,
+.btn-variant[disabled]:focus,
+fieldset[disabled] .btn-variant:focus,
+.btn-variant.disabled:active,
+.btn-variant[disabled]:active,
+fieldset[disabled] .btn-variant:active,
+.btn-variant.disabled.active,
+.btn-variant[disabled].active,
+fieldset[disabled] .btn-variant.active {
+  background-color: #77fd77;
+  border-color: #56c963;
+}
+.btn-variant .badge {
+  color: #77fd77;
+  background-color: #056402;
+}
+.btn-xl {
+  color: white;
+  background-color: #09ff00;
+  border-color: #09ff00;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 40px;
+}
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  color: white;
+  background-color: #07cc00;
+  border-color: #07c200;
+}
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  background-color: #09ff00;
+  border-color: #09ff00;
+}
+.btn-xl .badge {
+  color: #09ff00;
+  background-color: white;
+}
+.clear {
+  clear: both;
+}
+.container {
+  display: inline-block;
+  height: 100%;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+}
+.vertical-scrollbar {
+  overflow-x: hidden;
+  /*for hiding horizontal scroll bar*/
+  overflow-y: auto;
+  /*for vertical scroll bar*/
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.img-centered {
+  margin: 0px auto;
+}
+.jumbotron {
+  border-radius: 50px;
+  color: #F5F5F5;
+  background: -webkit-radial-gradient(#000000, #808080, #000000);
+  background: -moz-radial-gradient(#000000, #808080, #000000);
+  background: -ms-radial-gradient(#000000, #808080, #000000);
+  background: -o-radial-gradient(#000000, #808080, #000000);
+  background: radial-gradient(#000000, #808080, #000000);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.ng-animate.item:not(.left):not(.right) {
+  -webkit-transition: 0s ease-in-out left;
+  transition: 0s ease-in-out left;
+}
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+p .large {
+  font-size: 16px;
+}
+pre {
+  background-color: #c5f7c5;
+  line-height: 1.1;
+  margin: 0px auto;
+  width: 50%;
+  z-index: 9999;
+}
+pre .stateDisplay {
+  align-content: flex-start;
+  bottom: 100px;
+  display: inline-block;
+  height: 90px;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  width: 300px;
+}
+pre .stateDisplay p {
+  color: #FF0000;
+  font-size: 12px;
+  overflow: hidden;
+}
+.row {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.text-muted {
+  color: #77fd77;
+}
+.text-primary {
+  color: #09ff00;
+}
+::-moz-selection {
+  background: #09ff00;
+  text-shadow: none;
+}
+::selection {
+  background: #09ff00;
+  text-shadow: none;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+/*****************************************************************************
+ ** END OF FILE - main.less
+ ****************************************************************************/

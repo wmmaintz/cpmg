@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CPMG</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <meta name="description" content="CPMG test website">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" href="http://cdn.cordellcordell.com/wp-content/themes/cordell-genesis/images/apple-touch-icon-precomposed.png" />       
+
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kaushan+Script">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+
+        <!--
+        <link rel="stylesheet" type="text/css" href="">
+        -->
+        <link rel="stylesheet" type="text/css" href="css/allcss.css">
+
+    </head>
+    <body ng-app="ngApp">
+
+        <!-- Add your site or application content here -->
+        <div class="fullwidth">
+            <div class="container loading" ng-show="loading">
+                <br/><br/><br/><br/><h2>Loading ...</h2>
+            </div>
+            
+            <!-- Display the fixed navigation menu on the top of the page  -->
+            <div data-ng-include="'partials/_header.html'"></div>
+            
+            <!-- Display the partial view selected from the navigation menu  -->
+            <div>
+                <ui-view class="partialView"></ui-view>
+            </div>
+
+            <!-- Display the fixed footer on the bottom of the page  -->
+            <div data-ng-include="'partials/_footer.html'"></div>
+            
+        </div>
+
+        <!--
+        <script type="text/javascript" src=""></script>
+        -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/angular-animate.js"></script>
+        <script type="text/javascript" src="js/angular-resource.js"></script>
+        <script type="text/javascript" src="js/angular-touch.js"></script>
+        <script type="text/javascript" src="js/angular-ui-router.js"></script>
+        <script type="text/javascript" src="js/paging.js"></script>
+        <script type="text/javascript" src="js/sortable.js"></script>
+        <script type="text/javascript" src="js/alljs.js"></script>
+        
+    </body>
+</html>

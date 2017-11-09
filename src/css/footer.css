@@ -1,0 +1,188 @@
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name footer.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the footer
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+footer {
+  background: -webkit-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -moz-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -ms-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: -o-linear-gradient(#56c963, #c5f7c5, #56c963);
+  background: linear-gradient(#56c963, #c5f7c5, #56c963);
+  border-top: 0.25px solid #000000;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+  bottom: 0px;
+  color: #000000;
+  height: 30px;
+  margin: auto;
+  padding: 5px;
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 9999;
+}
+footer .footerText {
+  font-size: 10pt;
+  vertical-align: middle;
+}
+footer .copyrightLine .copyright,
+footer .copyrightLine .allBus,
+footer .copyrightLine .abcs,
+footer .copyrightLine .allRights {
+  font-size: 9pt;
+  text-transform: none;
+}
+footer .copyrightLine .abcs {
+  display: none;
+}
+footer .socBtns {
+  display: inline-block;
+  object-fit: fill;
+  padding: 0px;
+  text-align: center;
+  text-transform: none;
+  width: 100%;
+}
+footer .socBtns li {
+  background-color: #ffffff;
+  border-radius: 33%;
+  color: #000000;
+  display: inline-flex;
+  font-size: 12pt;
+  height: 20px;
+  list-style: none;
+  list-style-type: none;
+  margin-top: 0px;
+  outline: none;
+  width: 20px;
+}
+footer .socBtns li a {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+footer .socBtns li a:hover,
+footer .socBtns li a:focus,
+footer .socBtns li a:active,
+footer .socBtns li a .active {
+  background: -webkit-radial-gradient(#ffffff, #09ff00);
+  background: -moz-radial-gradient(#ffffff, #09ff00);
+  background: -ms-radial-gradient(#ffffff, #09ff00);
+  background: -o-radial-gradient(#ffffff, #09ff00);
+  background: radial-gradient(#ffffff, #09ff00);
+  border: 1px solid #056402;
+  color: #09ff00;
+}
+footer .socBtns li a i .fa {
+  font-size: 14pt;
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .footerRow1 {
+    margin-bottom: 10px;
+  }
+  .footerRow1 .footer-text {
+    font-size: 90%;
+  }
+  .footerRow1 .soc-btns {
+    font-size: 90%;
+  }
+  .footerRow2 {
+    /* font-size: 9pt; */
+    font-size: 90%;
+    margin-top: 10px;
+    top: 20px;
+  }
+  .footerRow2 .copyrightLine {
+    vertical-align: middle;
+  }
+  .footerRow2 .copyrightLine .copyright {
+    display: inline-block;
+  }
+  .footerRow2 .copyrightLine .allRights {
+    display: none;
+  }
+}
+@media (min-width: 1px) and (max-width: 424px) {
+  .footerRow1 {
+    display: none;
+  }
+  .footerRow2 {
+    margin-top: 20px;
+  }
+  .footerRow2 .copyrightLine .abcs {
+    display: inline-block;
+    padding: 20px;
+  }
+  .footerRow2 .copyrightLine .allBus {
+    display: none;
+  }
+  .footerRow2 .copyrightLine .allRights {
+    display: none;
+  }
+}
+/*****************************************************************************
+ ** END OF FILE - footer.less
+ ****************************************************************************/
+/*# sourceMappingURL=footer.css.map */

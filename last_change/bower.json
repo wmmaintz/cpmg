@@ -1,0 +1,60 @@
+{
+  "name": "cpmg",
+  "version": "0.0.1",
+  "authors": [
+    "wmmaintz <bill@allbusinesscomputerservices.com>"
+  ],
+  "description": "Test cast to access jsonplaceholder.typicode.com website",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://localhost:3000",
+  "private": true,
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    "**/*.md",
+    ".gitignore",
+    "GulpFile.js",
+    "package.json",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "angular": "1.5.8",
+    "angular-resource": "~1.4.1",
+    "angular-animate": "^1.5.7",
+    "angular-carousel": "~0.3.12",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.0",
+    "angular-touch": "~1.4.1",
+    "angular-ui": "~0.4.0",
+    "angular-ui-bootstrap": "~0.13.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-sortable": "~0.13.4",
+    "angular-ui-utils": "~2.0.0",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.2"
+  },
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.1",
+    "modernizr": "^3.3.1",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.5.8",
+    "angular-bootstrap": "~0.13.0",
+    "angular-touch": "~1.4.1",
+    "angular-ui": "~0.4.0",
+    "angular-ui-bootstrap": "~0.13.0",
+    "angular-ui-sortable": "~0.13.4",
+    "angular-ui-utils": "~2.0.0",
+    "respond": "^1.4.2",
+    "requirejs": "^2.2.0",
+    "html5shiv": "^3.7.3",
+    "ngAnimate": "*"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
+  }
+}

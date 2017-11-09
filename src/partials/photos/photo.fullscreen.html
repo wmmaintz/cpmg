@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+* @ngdoc overview
+* @name photo.fullscreen.html
+*
+* @description
+* AngularJS partials view - Fullscreen Photo screen.
+*
+-->
+
+<section class="photo-fullscreen-section">
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="section-heading">{{sname}}</h1>
+        </div>
+    </div>
+
+    <div id="fullscreenPhoto" class="fullwidth">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="container">
+
+                    <div id="imgSizeSlider">
+                        <input class="slideImgSize" 
+                                type = "range"
+                                min = "20"
+                                max = "100"
+                                step = "1"
+                                value = "{{slideImgSize}}"
+                                ng-model="slideImgSize"/>
+                        <label class="imgSizeLbl">
+                            &nbsp;Image Size %&nbsp;:&nbsp;&nbsp;{{slideImgSize}} %</label>
+                    </div>
+
+                    <img class="img img-rounded img-responsive"
+                        id="fullscreenImg"
+                        src="{{shref}}"
+                        alt="{{sname}}"
+                        style="width:{{slideImgSize}}%;"
+                    />
+
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+    </div>
+</section>

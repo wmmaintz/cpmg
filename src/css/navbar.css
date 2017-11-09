@@ -1,0 +1,254 @@
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name navbar.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the navigation bar
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+.nav,
+.navbar-default,
+.navbar-right {
+  background: -webkit-linear-gradient(transparent, transparent, transparent);
+  background: -moz-linear-gradient(transparent, transparent, transparent);
+  background: -ms-linear-gradient(transparent, transparent, transparent);
+  background: -o-linear-gradient(transparent, transparent, transparent);
+  background: linear-gradient(transparent, transparent, transparent);
+  border: .25px solid transparent;
+  -moz-box-sizing: none;
+  -webkit-box-shadow: 0px 0px;
+  -webkit-box-sizing: none;
+  border: 0px;
+  box-shadow: 0px 0px;
+  box-sizing: none;
+  height: 55px;
+  margin-top: 0px;
+  z-index: 9999;
+}
+.nav .navbar-toggle,
+.navbar-default .navbar-toggle,
+.navbar-right .navbar-toggle {
+  border: 2px solid #77fd77;
+}
+.nav .menu-item,
+.navbar-default .menu-item,
+.navbar-right .menu-item {
+  background: -webkit-radial-gradient(#ffffff, #77fd77);
+  background: -moz-radial-gradient(#ffffff, #77fd77);
+  background: -ms-radial-gradient(#ffffff, #77fd77);
+  background: -o-radial-gradient(#ffffff, #77fd77);
+  background: radial-gradient(#ffffff, #77fd77);
+  color: #056402;
+  border: 2px solid #77fd77;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  padding: 13px;
+}
+.nav .menu-item:active,
+.navbar-default .menu-item:active,
+.navbar-right .menu-item:active,
+.nav .menu-item.active,
+.navbar-default .menu-item.active,
+.navbar-right .menu-item.active,
+.nav .menu-item::selection,
+.navbar-default .menu-item::selection,
+.navbar-right .menu-item::selection,
+.nav .menu-item::-moz-selection,
+.navbar-default .menu-item::-moz-selection,
+.navbar-right .menu-item::-moz-selection {
+  background: -webkit-radial-gradient(#56c963, #056402);
+  background: -moz-radial-gradient(#56c963, #056402);
+  background: -ms-radial-gradient(#56c963, #056402);
+  background: -o-radial-gradient(#56c963, #056402);
+  background: radial-gradient(#56c963, #056402);
+  color: #056402;
+  border: 2px solid #F5F5F5;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border-radius: 10px;
+}
+.nav .menu-item:hover,
+.navbar-default .menu-item:hover,
+.navbar-right .menu-item:hover,
+.nav .menu-item:focus,
+.navbar-default .menu-item:focus,
+.navbar-right .menu-item:focus {
+  background: -webkit-radial-gradient(#77fd77, #F5F5F5);
+  background: -moz-radial-gradient(#77fd77, #F5F5F5);
+  background: -ms-radial-gradient(#77fd77, #F5F5F5);
+  background: -o-radial-gradient(#77fd77, #F5F5F5);
+  background: radial-gradient(#77fd77, #F5F5F5);
+  color: #666666;
+  border: 2px solid #666666;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  border-radius: 10px;
+}
+.nav .submenu-item,
+.navbar-default .submenu-item,
+.navbar-right .submenu-item {
+  background: -webkit-radial-gradient(#ffffff, #A3A3A3);
+  background: -moz-radial-gradient(#ffffff, #A3A3A3);
+  background: -ms-radial-gradient(#ffffff, #A3A3A3);
+  background: -o-radial-gradient(#ffffff, #A3A3A3);
+  background: radial-gradient(#ffffff, #A3A3A3);
+  color: #056402;
+  border: 2px solid #A3A3A3;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+  background-color: black;
+  border-radius: 15px;
+}
+.nav .submenu-item:active,
+.navbar-default .submenu-item:active,
+.navbar-right .submenu-item:active,
+.nav .submenu-item.active,
+.navbar-default .submenu-item.active,
+.navbar-right .submenu-item.active {
+  background: -webkit-radial-gradient(#F5F5F5, #77fd77);
+  background: -moz-radial-gradient(#F5F5F5, #77fd77);
+  background: -ms-radial-gradient(#F5F5F5, #77fd77);
+  background: -o-radial-gradient(#F5F5F5, #77fd77);
+  background: radial-gradient(#F5F5F5, #77fd77);
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+}
+.nav .submenu-item:hover,
+.navbar-default .submenu-item:hover,
+.navbar-right .submenu-item:hover,
+.nav .submenu-item:focus,
+.navbar-default .submenu-item:focus,
+.navbar-right .submenu-item:focus {
+  background: -webkit-radial-gradient(#77fd77, #F5F5F5);
+  background: -moz-radial-gradient(#77fd77, #F5F5F5);
+  background: -ms-radial-gradient(#77fd77, #F5F5F5);
+  background: -o-radial-gradient(#77fd77, #F5F5F5);
+  background: radial-gradient(#77fd77, #F5F5F5);
+  color: #666666;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: -webkit-radial-gradient 0.5s;
+  /* Safari 3.1 to 6.0 */
+  -moz-transition: -moz-radial-gradient 0.5s;
+  -ms-transition: -ms-radial-gradient 0.5s;
+  -o-transition: -o-radial-gradient 0.5s;
+  transition: radial-gradient 0.5s;
+  transition: color 2s;
+  transition: border-radius 0.5s;
+}
+.nav .dropdown-menu,
+.navbar-default .dropdown-menu,
+.navbar-right .dropdown-menu {
+  -webkit-box-shadow: 0px 0px;
+  background-color: transparent;
+  border: 10px solid transparent;
+  box-shadow: 0px 0px;
+  padding: 0px;
+}
+.navbar-collapse {
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-collapse .navbar-form {
+  border: 1px solid #666666;
+}
+/*****************************************************************************
+ ** END OF FILE - navbar.less
+ ****************************************************************************/

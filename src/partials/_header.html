@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+/**
+* @ngdoc overview
+* @name _header.html
+*
+* @description
+* AngularJS partials view - header that appears at the top of every screen.
+* Contains the navigation bar.
+*
+*/
+ -->
+<header>
+    <nav class="nav navbar-default navbar-fixed-top nav-pills">
+        <div class="container-fluid">
+            
+            <div class="navbar-header">
+                <button type="button hidden" 
+                        class="navbar-toggle collapsed" 
+                        data-toggle="collapse" 
+                        data-target=".navbar-collapse" 
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand menu-item" 
+                   ui-sref="home"
+                   ui-sref-active="active">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <span class="menu-text">&nbsp;CPMG</span>
+                </a>
+            </div>    
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-default nav-pills navbar-right">
+
+                    <!-- HOME -->
+                    <li ui-sref-active="active" role="presentation" class="hidden">
+                        <a ui-sref="home" 
+                           
+                            data-ng-class="{active:isActive('/')}"></a>
+                    </li>
+
+                    <!-- About Page -->
+                    <li ui-sref-active="active">
+                        <a class="menu-item"
+                            ui-sref="website"
+                            ui-sref-active="active"
+                            data-ng-class="{active:isActive('website')}">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                            <span class="menu-text">&nbsp;About</span>
+                        </a>
+                    </li> <!-- End of About Page -->
+
+                    <!-- Photos Page -->
+                    <li ng-class="{active: $state.includes('photo')}">
+                        <a class="menu-item"
+                            ui-sref="photoGallery">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span class="menu-text">&nbsp;Photo Gallery</span>
+                        </a>
+                    </li>
+                    <!-- End of Photo Page -->
+
+                    <li ui-view="hint" class="navbar-text pull-right"></li>
+                </ul> <!-- Right-side menu items -->
+
+            </div>
+
+        </div>
+
+    </nav>
+</header>

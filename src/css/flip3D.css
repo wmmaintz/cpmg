@@ -1,0 +1,177 @@
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name flip3D.less
+ **
+ ** @description
+ ** CSS / LESS file defining the display attributes of the photo gallery
+ ** Utilizes Responsive Web Design and CSS3 features and functionality.
+ **
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name variables.less
+ **
+ ** @description
+ ** CSS / LESS variables to be imported into the other LESS files
+ **
+ ****************************************************************************/
+/**
+  ** Define color variables
+  **/
+/**
+ ** Define photo dimensions
+ **/
+/**
+ ** Google Device Widths
+ **
+ ** LDT - 1440px - Large Desktop
+ ** NDT - 1024px - Normal Desktop
+ ** TAB -  768px - Tablet
+ ** LMB -  425px - Large Mobile
+ ** MMB -  375px - Medium Mobile
+ ** SMB -  320px - Small Mobile
+ **
+ ** Bootstrap Screen Widths
+ **
+ ** @size_xl            : "1200px";
+ ** @size_lg            : "1072px";
+ ** @size_md            : "992px";
+ ** @size_sm            : "768px";
+ ** @size_xs            : "350px";
+ **
+ **/
+/*****************************************************************************
+ ** END OF FILE - variables.less
+ ****************************************************************************/
+/*****************************************************************************
+ **
+ ** @ngdoc overview
+ ** @name mixins.less
+ **
+ ** @description
+ ** CSS / LESS definitions to be imported into the other LESS files
+ **
+ ****************************************************************************/
+.dropdown-menu {
+  background-color: transparent;
+  list-style: none;
+  margin-left: 0;
+  text-align: left;
+}
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
+/**
+** CSS for image 3D flip
+**/
+.flip3D {
+  border-radius: 24px;
+  float: left;
+  height: 280px;
+  padding: 0px;
+  width: 240px;
+}
+.flip3D .front {
+  border-radius: inherit;
+  height: 240px;
+  width: 240px;
+}
+.flip3D .front img {
+  background-size: contain;
+  margin: 0px auto;
+  vertical-align: middle;
+}
+.flip3D .back button {
+  background-color: #000000;
+  border-radius: 10px;
+  bottom: 2px;
+  color: #F5F5F5;
+  left: 5%;
+  position: absolute;
+  width: 90%;
+}
+.flip3D > .front {
+  -moz-backface-visibility: hidden;
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -moz-transition: 0.5s linear 0s;
+  -ms-backface-visibility: hidden;
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -ms-transition: 0.5s linear 0s;
+  -o-backface-visibility: hidden;
+  -o-transform: perspective(600px) rotateY(180deg);
+  -o-transition: 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -webkit-transition: 0.5s linear 0s;
+  backface-visibility: hidden;
+  background: transparent;
+  border: 10px solid transparent;
+  border-radius: inherit;
+  margin-top: 10px;
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  transition: 0.5s linear 0s;
+}
+.flip3D:hover > .front {
+  -moz-transform: perspective(600px) rotateY(-180deg);
+  -ms-transform: perspective(600px) rotateY(-180deg);
+  -o-transform: perspective(600px) rotateY(-180deg);
+  -webkit-transform: perspective(600px) rotateY(-180deg);
+  transform: perspective(600px) rotateY(-180deg);
+  z-index: 100;
+}
+.flip3D > .back {
+  -moz-backface-visibility: hidden;
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -moz-transition: 0.5s linear 0s;
+  -ms-backface-visibility: hidden;
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -ms-transition: 0.5s linear 0s;
+  -o-backface-visibility: hidden;
+  -o-transform: perspective(600px) rotateY(180deg);
+  -o-transition: 0.5s linear 0s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -webkit-transition: 0.5s linear 0s;
+  backface-visibility: hidden;
+  background: #77fd77;
+  border: 2px solid #056402;
+  border-radius: inherit;
+  height: 264px;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  transition: 0.5s linear 0s;
+  width: 208px;
+  /*
+    transform: perspective(600px) rotateY(180deg);
+    transition: -webkit-transform 0.5s linear 0s;
+    transition:    -moz-transform 0.5s linear 0s;
+    transition:     -ms-transform 0.5s linear 0s;
+    transition:      -o-transform 0.5s linear 0s;
+    transition:         transform 0.5s linear 0s;
+    */
+}
+.flip3D:hover > .back {
+  -moz-transform: perspective(600px) rotateY(0deg);
+  -ms-transform: perspective(600px) rotateY(0deg);
+  -o-transform: perspective(600px) rotateY(0deg);
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  z-index: 100;
+}
+.infoTags {
+  height: 50px;
+  max-height: 180px;
+  max-width: 100%;
+  width: 180px;
+  word-spacing: 5px;
+  word-wrap: break-word;
+}
+/*****************************************************************************
+ ** END OF FILE - flip3D.less
+ ****************************************************************************/
+/*# sourceMappingURL=flip3D.css.map */

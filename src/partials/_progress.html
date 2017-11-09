@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+/**
+* @ngdoc overview
+* @name _progress.html
+*
+* @description
+* AngularJS partials view - display a progress bar for long-winded processes
+*/
+-->
+
+<script>
+    $scope.progressMin = 0;
+    $scope.progressMax = 100;
+    $scope.progressNow = 70;
+
+    $('.progressbar').animate({
+        width: '70%'
+    }, 2500);
+
+</script>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-striped active" 
+         role="progressbar" 
+         aria-valuenow="{{progressNow}}"
+         aria-valuemin="{{progressMin}}" 
+         aria-valuemax="{{progressMax}}" 
+         style="width:70%;">
+        <span class="sr-only">{{(progressNow - progressMin) / (progressMax - progressMin)}}% Complete</span>
+    </div>
+</div>
+
